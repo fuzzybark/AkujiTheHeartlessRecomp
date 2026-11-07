@@ -1,0 +1,64 @@
+﻿# ==============================================================================
+# .gitignore for Akuji The Heartless Recomp Public Source Repository
+# ==============================================================================
+
+# Build outputs
+/build/
+/build-*/
+/out/
+/dist/
+*.exe
+*.dll
+*.so
+*.dylib
+*.zip
+*.tar.*
+
+# Machine-translated game code (EXCLUDED for legal copyright compliance)
+# Contributors generate this locally from their own disc using psxrecomp_cli.py
+/generated/*
+!/generated/README.md
+
+# Commercial game disc dumps & images (NEVER COMMIT)
+/disc/*
+!/disc/PLACE_YOUR_DISC_FILES_HERE.txt
+*.bin
+*.cue
+*.iso
+*.img
+*.chd
+*.sub
+*.ccd
+
+# Retail console BIOS ROMs (NEVER COMMIT - OpenBIOS is used instead)
+/bios/*
+!/bios/OpenBIOS.LICENSE
+SCPH*.bin
+SCPH*.BIN
+scph*.bin
+ps-*.bin
+
+# Local save states & memory cards
+/saves/*
+*.mcd
+*.mcr
+*.sav
+
+# Diagnostic logs & dumps
+*.log
+*.jsonl
+psx_crash.txt
+psx_last_run_report.json
+psx_freeze_dump_*.json
+probe_run.log
+
+# Caches & IDE directories
+.cache/
+.vs/
+.vscode/
+*.user
+__pycache__/
+*.pyc
+CMakeCache.txt
+CMakeFiles/
+compile_commands.json

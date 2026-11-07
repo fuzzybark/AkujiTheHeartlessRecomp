@@ -1,0 +1,2 @@
+﻿Place your legally dumped "Akuji the Heartless (USA).cue" and ".bin" files into this folder.
+Supported format: Redump-compliant multi-track CUE/BIN (SLUS-00715).

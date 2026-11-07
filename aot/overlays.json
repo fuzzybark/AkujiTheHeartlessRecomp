@@ -1,0 +1,56 @@
+{
+  "schema": "psxrecomp AOT methods v1",
+  "game_id": "SLUS-00715",
+  "static_output": "generated/overlays_static.c",
+  "disc_hashes": {
+    "sha256": "048b165afae7cdcad967fdec63cb7e0818f34db730fad7bddeab8b2ff210e855"
+  },
+  "generic_exclude_files": [
+    {
+      "files": [
+        "MAIN.EXE",
+        "KAIN2/KAIN2.EXE",
+        "LAUNCH.EXE",
+        "PSX.EXE",
+        "TOMB3/MAIN.EXE"
+      ],
+      "reason": "Excluded demo/trailer EXEs and low-loaders; MAIN.EXE is owned by fixed_address_extents"
+    }
+  ],
+  "expected_records": 2,
+  "strict_bounds": true,
+  "images": [
+    {
+      "method": "psx_exe",
+      "files": [
+        "AKUJI.EXE"
+      ],
+      "excluded_ranges": [
+        {
+          "start": "0x800A7A54",
+          "end": "0x800B1800",
+          "sha256": "fa9a3d9ae056d9baeda705a87328b80dd207154a34643687ef2c817b37888bd0",
+          "reason": "Trailing embedded rodata pointer tables and asset descriptors"
+        }
+      ]
+    },
+    {
+      "method": "fixed_address_extents",
+      "allow_missing": true,
+      "entries": [
+        "0x8001F3DC"
+      ],
+      "extents": [
+        {
+          "file": "MAIN.EXE",
+          "file_offset": "0x800",
+          "base": "0x80018000",
+          "address": "0x80018000",
+          "size": "0x30800",
+          "load_addr": "0x80018000",
+          "sha256": "21139dc668d32fc74a5004f9f83b9a134189ebb45337a00decd0da2f2a3a9212"
+        }
+      ]
+    }
+  ]
+}

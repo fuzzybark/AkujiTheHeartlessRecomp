@@ -1,0 +1,62 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Akuji the Heartless"
+id = "SLUS-00715"
+players = 1
+exe = "disc/SLUS_007.15"
+disc = "disc/Akuji the Heartless (USA).cue"
+load_address = "0x801F8000"
+entry_pc = "0x801FBEE0"
+text_size = "0x00005800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Akuji the Heartless (USA) (Track 1).bin"
+cue_name = "Akuji the Heartless (USA).cue"
+boot_exe = "SLUS_007.15"
+known_sizes = [254542848]
+known_md5 = [
+  "1c470701db9955e606ca345d3140cc2e",
+]
+known_sha1 = [
+  "5ec2732553ba284de04be2238e740b188ee7c6bd",
+]
+known_crc32 = [
+  "08602620",
+]
+
+[recompiler]
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+window_title = "Akuji the Heartless Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+overlay_region_floor = "0x10000"
+idle_skip = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+frame_interpolation = true
+frame_interpolation_fps = 0
+
+[audio]
+buffer_ms = 40
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 3
+required_disc_fp = "0271dfc5739bc2e68b4bb9d0f1560864aa0b5b100e7f5cb1b03affbf4ecec92b"
+
