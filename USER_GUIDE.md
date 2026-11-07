@@ -97,15 +97,10 @@ Located under **Graphics** below Internal Resolution:
 | Key | Action | Function |
 |---|---|---|
 | **Alt + Enter** | Toggle Fullscreen | Windowed &harr; Borderless Fullscreen |
-| **F1** | Quicksave | Saves snapshot to Slot 1 |
-| **F3** | Quickload | Restores snapshot from Slot 1 |
-| **F5** | Cycle Resolution | Cycles Native &rarr; 720p &rarr; 1080p &rarr; 1440p &rarr; 4K |
+| **1** | Cycle Resolution | Cycles Native &rarr; 720p &rarr; 1080p &rarr; 1440p &rarr; 4K |
 | **7** | PGXP Geometry Correction | Toggles sub-pixel vertex precision |
 | **8** | Perspective Texturing | Toggles perspective-correct UVs |
 | **9** | Texture Filtering | Toggles Bilinear smoothing vs Nearest pixelation |
-| **F11** | Toggle CRT Shader | Toggles CRT scanline simulation |
-| **Tab** (Hold) | Fast Forward | Speeds up game clock for dialogue/loading |
-| **Backspace** | Rewind | Rewinds active gameplay up to 10 seconds |
 
 ---
 
