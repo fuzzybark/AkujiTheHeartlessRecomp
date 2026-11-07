@@ -11,7 +11,7 @@ A native 64-bit Windows static recompilation project for the 1998 PlayStation cl
 
 ## Overview
 
-Unlike emulators that interpret or dynamically recompile MIPS instructions at runtime, static recompilation translates PlayStation binaries ahead of time into native C code. When compiled for modern 64-bit platforms, the game executes natively with zero emulation overhead, instant load times, and modern PC enhancements.
+Unlike emulators that interpret or dynamically recompile MIPS instructions at runtime, static recompilation translates PlayStation binaries ahead of time into native C code. When compiled for modern 64-bit platforms, the game executes natively with zero emulation overhead, and modern PC enhancements.
 
 > [!NOTE]
 > This static recompilation was tested and verified with the **SLUS-00715** version of the game (**USA**, NTSC-U). Ensure your disc dump matches the USA retail release in multi-track CUE/BIN format.
@@ -22,10 +22,8 @@ Unlike emulators that interpret or dynamically recompile MIPS instructions at ru
 * **PGXP Sub-Pixel Precision:** Eliminates characteristic PlayStation 3D polygon jitter, vertex wobble, and polygon seam tearing.
 * **Perspective-Correct Texturing:** Corrects affine UV interpolation on 3D geometry.
 * **Presentation Decoupling:** Smooth frame presentation pacing at 60, 120, 144, 200, 240 FPS or monitor refresh sync without altering the fixed 30 Hz game physics.
-* **Supersampling (SSAA):** Internal supersampling up to 4x for ultra-sharp polygon anti-aliasing.
 * **Clean-Room OpenBIOS:** Bundled with open-source OpenBIOS (MIT). No proprietary Sony retail BIOS dump is required.
 * **Controller & Keyboard Support:** Full native support for Xbox (XInput), PlayStation (DualShock 4 / DualSense), Switch Pro, and DirectInput controllers, plus customizable keyboard mappings.
-* **Save State & Rewind Support:** Instantaneous quicksaves (`F1`/`F3`) and 10-second real-time gameplay rewind (`Backspace`).
 * **Standard Memory Cards:** Full compatibility with standard `.mcd` memory card files in `saves/card1.mcd`.
 
 ---
