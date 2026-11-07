@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ &amp; Legal Audit — Akuji Recomp</title>
+  <meta name="description" content="Frequently asked questions and legal disclosures regarding Akuji the Heartless Recomp, static recompilation, and open-source licensing.">
+  <link rel="icon" type="image/x-icon" href="images/akuji.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand-link">
+        <img src="images/akuji.ico" alt="Akuji Logo" class="brand-icon">
+        <span>Akuji Recomp</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="install.html">Installation</a></li>
+        <li><a href="faq.html" class="active">FAQ &amp; Legal</a></li>
+        <li><a href="install.html#download" class="btn-nav">Get Started</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container prose" style="padding-top: 2.5rem; padding-bottom: 4rem;">
+    <div class="page-header">
+      <span class="badge-tag">Questions &amp; Licensing</span>
+      <h1>Frequently Asked Questions &amp; Legal</h1>
+      <p class="lead">
+        Answers to common questions regarding compatibility, static recompilation, system requirements, and legal compliance.
+      </p>
+    </div>
+
+    <h2>1. General Questions</h2>
+
+    <h3>What is a "Static Recompilation"?</h3>
+    <p>
+      Unlike traditional emulators that interpret or just-in-time compile PlayStation machine code instruction-by-instruction at runtime, a static recompiler translates the entire original MIPS binary ahead of time into native C code. This C code is then compiled directly into a native Windows executable with an optimizing compiler (such as Clang). The result is negligible CPU overhead, zero micro-stutter, and direct access to native PC enhancements.
+    </p>
+
+    <h3>Is this an emulator?</h3>
+    <p>
+      No. It is a compiled native Windows application that links the recompiled game code against a lightweight runtime framework (<code>psxrecomp</code>) that simulates PS1 hardware peripherals (GPU rasterizer, SPU audio synthesizer, CD-ROM controller, and DMA channels) directly on modern APIs like OpenGL and SDL3.
+    </p>
+
+    <h3>Does this include the game?</h3>
+    <p>
+      <strong>No.</strong> The release package contains only the recompiled executable engine and open-source runtime components. It contains zero copyrighted level data, textures, models, dialogue, or music. You must supply your own authentic disc dump.
+    </p>
+
+    <h2>2. System Requirements</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Component</th>
+          <th>Minimum</th>
+          <th>Recommended</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Operating System</strong></td>
+          <td>Windows 10 64-bit (1903+)</td>
+          <td>Windows 10 / 11 64-bit</td>
+        </tr>
+        <tr>
+          <td><strong>Processor</strong></td>
+          <td>Intel Core i3 / AMD Ryzen 3</td>
+          <td>Intel Core i5 / AMD Ryzen 5 or better</td>
+        </tr>
+        <tr>
+          <td><strong>Memory</strong></td>
+          <td>4 GB RAM</td>
+          <td>8 GB RAM</td>
+        </tr>
+        <tr>
+          <td><strong>Graphics</strong></td>
+          <td>OpenGL 3.3 compatible GPU</td>
+          <td>DirectX 11 / OpenGL 4.5 compatible GPU</td>
+        </tr>
+        <tr>
+          <td><strong>Storage</strong></td>
+          <td>150 MB for game executable</td>
+          <td>700 MB for user-supplied CD-ROM dump</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>3. Legal &amp; Licensing Disclosures</h2>
+
+    <div class="alert-box gold">
+      <h4>Non-Commercial Fan Preservation Project</h4>
+      <p>
+        This project is distributed strictly for non-commercial research, education, and software preservation under fair use principles. No fees, monetization, donations, or commercial exploitation are permitted.
+      </p>
+    </div>
+
+    <h3>Trademark &amp; Copyright Notice</h3>
+    <p>
+      <em>Akuji the Heartless</em> is a registered trademark and copyright of Crystal Dynamics / Eidos Interactive / Embracer Group. PlayStation is a registered trademark of Sony Interactive Entertainment Inc. All trademarks, service marks, and trade names are the property of their respective owners.
+    </p>
+
+    <h3>Framework Licensing</h3>
+    <ul>
+      <li><strong>psxrecomp:</strong> Licensed under the <strong>PolyForm Noncommercial License 1.0.0</strong> &copy; 2026 Matthew Stanley. Commercial use is strictly prohibited.</li>
+      <li><strong>recomp-ui:</strong> Licensed under the <strong>MIT License</strong> &copy; 2026 Matthew Stanley.</li>
+      <li><strong>OpenBIOS:</strong> Licensed under the <strong>MIT License</strong> &copy; PCSX-Redux authors, Martin Korth, and uC-sdk.</li>
+      <li><strong>libchdr:</strong> Licensed under the <strong>BSD-3-Clause License</strong> &copy; Romain Tisserand and contributors.</li>
+      <li><strong>SDL3:</strong> Licensed under the <strong>zlib License</strong> &copy; Sam Lantinga and contributors.</li>
+    </ul>
+
+    <h3>Why is OpenBIOS used instead of retail BIOS?</h3>
+    <p>
+      Retail PlayStation BIOS ROMs (e.g., SCPH-1001) are proprietary, copyrighted software owned by Sony Interactive Entertainment. Redistributing a retail BIOS is illegal. Akuji Recomp ships with <strong>OpenBIOS</strong>, a 100% clean-room, open-source reverse-engineered implementation of the PS1 kernel released under the MIT license, allowing the software to boot out-of-the-box legally.
+    </p>
+
+    <h2>4. Project Status &amp; Scope</h2>
+    <p>
+      This release represents the stable, complete single-player recompilation of <em>Akuji the Heartless</em>. All single-player campaign levels, boss encounters, cutscenes, sanctuary gates, spirit spells, and memory card saving systems are fully playable from start to finish.
+    </p>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="legal-notice">
+          <strong>Disclaimer:</strong> Akuji the Heartless is &copy; 1998 Crystal Dynamics / Eidos Interactive / Embracer Group. This project is a non-commercial, independent software preservation effort.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

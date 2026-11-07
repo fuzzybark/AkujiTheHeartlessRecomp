@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Installation &amp; Game Disc Setup — Akuji Recomp</title>
+  <meta name="description" content="Step-by-step installation instructions and disc dumping guide for Akuji the Heartless Recomp. Learn how to provide your legally owned PS1 disc.">
+  <link rel="icon" type="image/x-icon" href="images/akuji.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand-link">
+        <img src="images/akuji.ico" alt="Akuji Logo" class="brand-icon">
+        <span>Akuji Recomp</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="install.html" class="active">Installation</a></li>
+        <li><a href="faq.html">FAQ &amp; Legal</a></li>
+        <li><a href="#download" class="btn-nav">Get Started</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container prose" style="padding-top: 2.5rem; padding-bottom: 4rem;">
+    <div class="page-header">
+      <span class="badge-tag">Setup Guide</span>
+      <h1>Installation &amp; Game Files Guide</h1>
+      <p class="lead">
+        Follow these steps to extract the release archive, provide your legally owned PS1 disc image, and start playing.
+      </p>
+    </div>
+
+    <div class="alert-box gold">
+      <h4>Legal Requirement: User-Provided Disc</h4>
+      <p>
+        Akuji the Heartless Recomp does <strong>not</strong> include any copyrighted game software, level geometry, textures, audio tracks, or retail BIOS files. You must provide a disc image dumped from your own authentic retail copy of <em>Akuji the Heartless (USA)</em>.
+      </p>
+    </div>
+
+    <h2 id="download">Step 1: Download the Release Archive</h2>
+    <p>
+      Download the latest Windows binary release package (<code>akuji-recomp-v0.1.0-windows-x64.zip</code>) from the official GitHub Releases page. Extract the contents of the ZIP archive into a dedicated folder on your computer (e.g., <code>C:\Games\AkujiRecomp\</code>).
+    </p>
+
+    <h2 id="disc-prep">Step 2: Obtain Your Disc Image</h2>
+    <p>
+      The recompilation requires the <strong>NTSC-U (USA)</strong> release of the game:
+    </p>
+    <ul>
+      <li><strong>Title:</strong> Akuji the Heartless</li>
+      <li><strong>Product Code:</strong> <code>SLUS-00715</code></li>
+      <li><strong>Format:</strong> Standard <code>.cue</code> / <code>.bin</code> image (Redump compatible).</li>
+    </ul>
+
+    <h3>How to Dump Your Retail CD-ROM</h3>
+    <ol class="steps-list">
+      <li>
+        <strong>Insert your original disc</strong> into your PC's optical CD/DVD drive.
+      </li>
+      <li>
+        <strong>Use optical ripping software</strong> such as <em>ImgBurn</em> (Read mode) or <em>AnyBurn</em>.
+      </li>
+      <li>
+        <strong>Save in BIN/CUE format:</strong> Ensure the software creates a <code>.cue</code> sheet alongside the track <code>.bin</code> files so CD-DA audio tracks are preserved.
+      </li>
+      <li>
+        <strong>Verify track filenames:</strong> A standard dump contains:
+        <ul>
+          <li><code>Akuji the Heartless (USA).cue</code></li>
+          <li><code>Akuji the Heartless (USA) (Track 1).bin</code> (Data)</li>
+          <li><code>Akuji the Heartless (USA) (Track 2).bin</code> (Audio)</li>
+          <li><code>Akuji the Heartless (USA) (Track 3).bin</code> (Audio)</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>Step 3: Placing the Disc Files</h2>
+    <p>
+      Place your <code>.cue</code> and <code>.bin</code> files directly inside the <code>disc/</code> subfolder inside the extracted game directory:
+    </p>
+
+    <pre><code>AkujiRecomp/
+├── AkujiTheHeartless_Recompiled.exe   # Main game executable
+├── game.toml                         # Engine configuration
+├── game_options.toml                 # Quality presets
+├── keybinds.ini                      # Input bindings
+├── bios/
+│   ├── openbios.bin                  # Clean-room open-source BIOS (MIT)
+│   └── OpenBIOS.LICENSE
+├── disc/
+│   ├── Akuji the Heartless (USA).cue
+│   ├── Akuji the Heartless (USA) (Track 1).bin
+│   ├── Akuji the Heartless (USA) (Track 2).bin
+│   └── Akuji the Heartless (USA) (Track 3).bin
+└── saves/                            # Memory cards generated on first save</code></pre>
+
+    <div class="alert-box">
+      <h4>Tip: Selecting via Launcher</h4>
+      <p>
+        Alternatively, you can place your disc image anywhere on your drive. When launching <code>AkujiTheHeartless_Recompiled.exe</code>, the launcher's <strong>Game</strong> tab allows you to browse and select any valid <code>.cue</code> file on your computer.
+      </p>
+    </div>
+
+    <h2>Step 4: Launching the Game</h2>
+    <p>
+      Double-click <code>AkujiTheHeartless_Recompiled.exe</code> to open the Recomp Launcher:
+    </p>
+    <ol>
+      <li>Verify your disc is detected under the <strong>Game</strong> tab.</li>
+      <li>Select your preferred graphics preset (<em>Original PS1</em> or <em>Enhanced PC</em>) under the <strong>Graphics</strong> tab.</li>
+      <li>Set your target refresh rate (e.g., 60 FPS, 144 FPS, or Match Display Refresh).</li>
+      <li>Click <strong>Launch</strong> to start the game!</li>
+    </ol>
+
+    <h2>Troubleshooting &amp; FAQ</h2>
+    <ul>
+      <li><strong>Error: "No disc found":</strong> Ensure your <code>.cue</code> file is located in the <code>disc/</code> directory or selected via the launcher. Verify that the filenames referenced inside the <code>.cue</code> file match the exact filenames of your <code>.bin</code> files.</li>
+      <li><strong>Music is silent:</strong> Ensure your disc was dumped as a multi-track image with audio tracks. Single-track ISO rips do not include the redbook audio tracks used for background music.</li>
+      <li><strong>Missing DLL errors:</strong> Ensure you have installed the latest <em>Microsoft Visual C++ Redistributable (x64)</em>.</li>
+    </ul>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="legal-notice">
+          <strong>Disclaimer:</strong> Akuji the Heartless is &copy; 1998 Crystal Dynamics / Eidos Interactive / Embracer Group. This project is a non-commercial, independent software preservation effort.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
